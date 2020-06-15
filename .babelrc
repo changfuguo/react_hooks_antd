@@ -1,7 +1,7 @@
 {
     "presets": [
       [
-        "env",
+        "@babel/preset-env",
         {
           "modules": false,
           "targets": {
@@ -9,19 +9,18 @@
           }
         }
       ],
-      "react",
-      "stage-2"
+      "@babel/preset-react",
     ],
-    // "plugins": [
-    //   "transform-runtime",
-    //   [
-    //     "import",
-    //     {
-    //       "libraryName": "antd",
-    //       "libraryDirectory": "es",
-    //       "style": "css"
-    //     }
-    //   ]
-    // ]
+    "plugins": [
+      "@babel/transform-runtime",
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "libraryDirectory": "es",
+          "style": "css"
+        }
+      ]
+    ]
   }
   
